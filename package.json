@@ -1,0 +1,29 @@
+{
+  "name": "fulfilment-node-stub-lambda",
+  "version": "0.0.1",
+  "description": "hello world lambda that deploys through riff-raff and gets credentials from s3",
+  "main": "index.js",
+  "cloudformation": false,
+  "isAwsLambda": true,
+  "projectName": "MemSub::Fulfilment::Test",
+  "riffraffFile": "riff-raff.yaml",
+  "uploadArtefact": false,
+  "buildDir": "dist",
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.4.0",
+    "lambda-local": "^1.4.2",
+    "node-riffraff-artefact": "^1.8.4",
+    "rollup": "^0.41.6",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-commonjs": "^8.0.2",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "webpack": "^2.4.1"
+  },
+  "scripts": {
+    "compile": "rollup -c",
+    "bundle": "ARTEFACT_PATH=$PWD riffraff-artefact",
+    "local": "lambda-local -l dist/index.js -e event.json -h handler -p membership -r eu-west-1"
+  }
+}
