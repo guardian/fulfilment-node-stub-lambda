@@ -9,11 +9,11 @@ templates:
       bucket: fulfilment-node-stub-lambda-dist
       functions:
         CODE:
-          name: fulfilment-node-stub-lambda-dist-CODE
-          filename: fulfilment-node-stub-lambda-dist.zip
+          name: fulfilment-node-stub-lambda-CODE
+          filename: fulfilment-node-stub-lambda.zip
         PROD:
-          name: fulfilment-node-stub-lambda-dist-PROD
-          filename: fulfilment-node-stub-lambda-dist.zip
+          name: fulfilment-node-stub-lambda-PROD
+          filename: fulfilment-node-stub-lambda.zip
       functionNames:
       - fulfilment-node-stub-lambda-
 deployments:
