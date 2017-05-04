@@ -1072,6 +1072,10 @@ domain-browser@^1.1.1:
   version "1.1.7"
   resolved "https://registry.yarnpkg.com/domain-browser/-/domain-browser-1.1.7.tgz#867aa4b093faa05f1de08c06f4d7b21fdf8698bc"
 
+dotenv@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-4.0.0.tgz#864ef1379aced55ce6f95debecdce179f7a0cd1d"
+
 ecc-jsbn@~0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/ecc-jsbn/-/ecc-jsbn-0.1.1.tgz#0fc73a9ed5f0d53c38193398523ef7e543777505"
@@ -1600,13 +1604,14 @@ kind-of@^3.0.2:
   dependencies:
     is-buffer "^1.1.5"
 
-lambda-local@^1.4.2:
+lambda-local@ashiina/lambda-local#316f6c743f6305385655b00db7d8349dac174c1c:
   version "1.4.2"
-  resolved "https://registry.yarnpkg.com/lambda-local/-/lambda-local-1.4.2.tgz#e14764cc68e2c679b02556c223c056ca3d14f12b"
+  resolved "https://codeload.github.com/ashiina/lambda-local/tar.gz/316f6c743f6305385655b00db7d8349dac174c1c"
   dependencies:
     aws-sdk "^2.1.6"
     chai "^3.5.0"
     commander "^2.6.0"
+    dotenv "^4.0.0"
     fs "^0.0.2"
     mute "^2.0.6"
     winston "^2.2.0"
