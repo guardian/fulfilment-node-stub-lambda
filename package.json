@@ -7,7 +7,7 @@
   "isAwsLambda": true,
   "projectName": "MemSub::Fulfilment::Test",
   "riffraffFile": "riff-raff.yaml",
-  "uploadArtefact": false,
+  "uploadArtefact": true,
   "buildDir": "dist",
   "devDependencies": {
     "babel-core": "^6.24.1",

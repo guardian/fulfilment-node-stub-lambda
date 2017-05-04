@@ -1,0 +1,16 @@
+regions:
+- eu-west-1
+stacks:
+- membership
+templates:
+  lambda:
+    type: aws-lambda
+    parameters:
+      bucket: fulfilment-node-stub-lambda-dist
+      fileName: fulfilment-node-stub-lambda.zip
+      prefixStack: false
+      functionNames:
+      - fulfilment-node-stub-lambda-
+deployments:
+  fulfilment-node-stub-lambda:
+    template: lambda
