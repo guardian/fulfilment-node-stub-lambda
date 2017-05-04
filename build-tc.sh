@@ -17,11 +17,12 @@ if [ ! -d "$YARN_LOCATION" ]; then
 	wget -qO- https://github.com/yarnpkg/yarn/releases/download/v${YARN_VERSION}/yarn-v${YARN_VERSION}.tar.gz | tar zvx
 	cd ../..
 fi
+PATH="$PATH:${YARN_LOCATION}/dist/bin/"
 
 # Installing packages via yarn
 
-${YARN_LOCATION}/dist/bin/yarn
+yarn
 
 # Building the client-side assets
 
-${YARN_LOCATION}/dist/bin/yarn build
+yarn build
