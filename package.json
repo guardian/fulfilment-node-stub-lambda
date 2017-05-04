@@ -7,7 +7,6 @@
   "isAwsLambda": true,
   "projectName": "MemSub::Fulfilment::Test",
   "riffraffFile": "riff-raff.yaml",
-  "uploadArtefact": true,
   "buildDir": "dist",
   "devDependencies": {
     "babel-core": "^6.24.1",
@@ -24,7 +23,7 @@
     "yarn":"npm install yarn && yarn",
     "build":"yarn compile && yarn bundle",
     "compile": "rollup -c",
-    "bundle": "ARTEFACT_PATH=$PWD riffraff-artefact",
+    "bundle": "VERBOSE=true ARTEFACT_PATH=$PWD yarn riffraff-artefact",
     "local": "lambda-local -l dist/index.js -e event.json -h handler -P ~/.aws/credentials -p membership -r eu-west-1 -t 10"
   }
 }

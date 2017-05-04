@@ -7,8 +7,13 @@ templates:
     type: aws-lambda
     parameters:
       bucket: fulfilment-node-stub-lambda-dist
-      fileName: fulfilment-node-stub-lambda.zip
-      prefixStack: false
+      functions:
+        CODE:
+          name: fulfilment-node-stub-lambda-dist-CODE
+          filename: fulfilment-node-stub-lambda-dist.zip
+        PROD:
+          name: fulfilment-node-stub-lambda-dist-PROD
+          filename: fulfilment-node-stub-lambda-dist.zip
       functionNames:
       - fulfilment-node-stub-lambda-
 deployments:
