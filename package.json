@@ -22,6 +22,8 @@
     "webpack": "^2.4.1"
   },
   "scripts": {
+    "yarn":"npm install yarn && yarn",
+    "build":"yarn compile && yarn bundle",
     "compile": "rollup -c",
     "bundle": "ARTEFACT_PATH=$PWD riffraff-artefact",
     "local": "lambda-local -l dist/index.js -e event.json -h handler -P ~/.aws/credentials -p membership -r eu-west-1 -t 10"
