@@ -20,6 +20,7 @@
     "rollup-plugin-node-resolve": "^3.0.0"
   },
   "scripts": {
+    "riffraff-artefact": "./node_modules/.bin/riffraff-artefact",
     "yarn":"npm install yarn && yarn",
     "build":"yarn compile && yarn bundle",
     "compile": "rollup -c",
