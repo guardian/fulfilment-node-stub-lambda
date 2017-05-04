@@ -11,7 +11,6 @@
   "buildDir": "dist",
   "devDependencies": {
     "babel-core": "^6.24.1",
-    "babel-loader": "^7.0.0",
     "babel-preset-env": "^1.4.0",
     "lambda-local": "ashiina/lambda-local#316f6c743f6305385655b00db7d8349dac174c1c",
     "node-riffraff-artefact": "^1.8.4",
