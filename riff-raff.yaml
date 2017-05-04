@@ -7,6 +7,7 @@ templates:
     type: aws-lambda
     parameters:
       bucket: fulfilment-node-stub-lambda-dist
+      prefixStack: false
       functionNames:
       - fulfilment-node-stub-lambda-
 deployments:
