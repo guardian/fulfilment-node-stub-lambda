@@ -16,7 +16,7 @@
     "rollup-plugin-babel": "^2.7.1",
     "rollup-plugin-commonjs": "^8.0.2",
     "rollup-plugin-node-resolve": "^3.0.0",
-    "node-riffraff-artefact": "guardian/node-riffraff-artefact#37919908e3eabcf2c4afb66cf328547836bf35b6"
+    "node-riffraff-artefact": "guardian/node-riffraff-artefact#9d1227a12456df67d9417ef188cb95aba23c241b"
 
   },
   "scripts": {

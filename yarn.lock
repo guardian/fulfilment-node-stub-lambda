@@ -1342,9 +1342,9 @@ node-pre-gyp@^0.6.29:
     tar "^2.2.1"
     tar-pack "^3.4.0"
 
-node-riffraff-artefact@guardian/node-riffraff-artefact#37919908e3eabcf2c4afb66cf328547836bf35b6:
-  version "1.8.4"
-  resolved "https://codeload.github.com/guardian/node-riffraff-artefact/tar.gz/37919908e3eabcf2c4afb66cf328547836bf35b6"
+node-riffraff-artefact@guardian/node-riffraff-artefact#9d1227a12456df67d9417ef188cb95aba23c241b:
+  version "2.0.0"
+  resolved "https://codeload.github.com/guardian/node-riffraff-artefact/tar.gz/9d1227a12456df67d9417ef188cb95aba23c241b"
   dependencies:
     aws-sdk "^2.4.14"
     babel-cli "^6.11.4"
