@@ -12,16 +12,17 @@
     "babel-core": "^6.24.1",
     "babel-preset-env": "^1.4.0",
     "lambda-local": "ashiina/lambda-local#316f6c743f6305385655b00db7d8349dac174c1c",
-    "node-riffraff-artefact": "^1.8.4",
     "rollup": "^0.41.6",
     "rollup-plugin-babel": "^2.7.1",
     "rollup-plugin-commonjs": "^8.0.2",
-    "rollup-plugin-node-resolve": "^3.0.0"
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "node-riffraff-artefact": "guardian/node-riffraff-artefact#37919908e3eabcf2c4afb66cf328547836bf35b6"
+
   },
   "scripts": {
     "riffraff-artefact": "./node_modules/.bin/riffraff-artefact",
-    "yarn":"npm install yarn && yarn",
-    "build":"yarn compile && yarn bundle",
+    "yarn": "npm install yarn && yarn",
+    "build": "yarn compile && yarn bundle",
     "compile": "rollup -c",
     "bundle": "VERBOSE=true ARTEFACT_PATH=$PWD yarn riffraff-artefact",
     "local": "lambda-local -l dist/index.js -e event.json -h handler -P ~/.aws/credentials -p membership -r eu-west-1 -t 10"
