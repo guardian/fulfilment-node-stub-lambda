@@ -1359,9 +1359,9 @@ node-pre-gyp@^0.6.29:
     tar "^2.2.1"
     tar-pack "^3.4.0"
 
-node-riffraff-artefact@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/node-riffraff-artefact/-/node-riffraff-artefact-2.0.0.tgz#5ccb6f84b455125bf3db87a6bbf2e48618ee4239"
+node-riffraff-artefact@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/node-riffraff-artefact/-/node-riffraff-artefact-2.0.1.tgz#58afb4582413752daf7964df1e0b4e8b216a1621"
   dependencies:
     aws-sdk "^2.4.14"
     babel-cli "^6.11.4"
