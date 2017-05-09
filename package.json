@@ -7,7 +7,7 @@
   "cloudformation": "cloudformation.yaml",
   "projectName": "MemSub::Fulfilment::Test",
   "riffraffFile": "riff-raff.yaml",
-  "cloudformationAppName": "fulfilment-node-stub-cloudformation",
+  "cloudformationAppTag": "fulfilment-node-stub-cloudformation",
   "buildDir": "dist",
   "devDependencies": {
     "babel-core": "^6.24.1",
