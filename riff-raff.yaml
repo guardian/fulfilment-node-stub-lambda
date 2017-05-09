@@ -10,6 +10,12 @@ templates:
       prefixStack: false
       functionNames:
       - fulfilment-node-stub-lambda-
+  cloudformation:
+    type: cloud-formation
+    parameters:
+      templatePath: 'cloudformation/cloudformation.yaml'
 deployments:
   fulfilment-node-stub-lambda:
     template: lambda
+  cloudformation:
+    template: cloudformation
