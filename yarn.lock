@@ -726,8 +726,8 @@ chalk@^1.1.0:
     supports-color "^2.0.0"
 
 chokidar@^1.6.1:
-  version "1.6.1"
-  resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-1.6.1.tgz#2f4447ab5e96e50fb3d789fd90d4c72e0e4c70c2"
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-1.7.0.tgz#798e689778151c8076b4b360e5edd28cda2bb468"
   dependencies:
     anymatch "^1.3.0"
     async-each "^1.0.0"
@@ -1342,9 +1342,9 @@ node-pre-gyp@^0.6.29:
     tar "^2.2.1"
     tar-pack "^3.4.0"
 
-node-riffraff-artefact@guardian/node-riffraff-artefact#9d1227a12456df67d9417ef188cb95aba23c241b:
+node-riffraff-artefact@guardian/node-riffraff-artefact#9057632baf7593449dcfe8b811001c06fb8eca85:
   version "2.0.0"
-  resolved "https://codeload.github.com/guardian/node-riffraff-artefact/tar.gz/9d1227a12456df67d9417ef188cb95aba23c241b"
+  resolved "https://codeload.github.com/guardian/node-riffraff-artefact/tar.gz/9057632baf7593449dcfe8b811001c06fb8eca85"
   dependencies:
     aws-sdk "^2.4.14"
     babel-cli "^6.11.4"

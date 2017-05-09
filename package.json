@@ -12,12 +12,11 @@
     "babel-core": "^6.24.1",
     "babel-preset-env": "^1.4.0",
     "lambda-local": "ashiina/lambda-local#316f6c743f6305385655b00db7d8349dac174c1c",
+    "node-riffraff-artefact": "guardian/node-riffraff-artefact#9057632baf7593449dcfe8b811001c06fb8eca85",
     "rollup": "^0.41.6",
     "rollup-plugin-babel": "^2.7.1",
     "rollup-plugin-commonjs": "^8.0.2",
-    "rollup-plugin-node-resolve": "^3.0.0",
-    "node-riffraff-artefact": "guardian/node-riffraff-artefact#9d1227a12456df67d9417ef188cb95aba23c241b"
-
+    "rollup-plugin-node-resolve": "^3.0.0"
   },
   "scripts": {
     "riffraff-artefact": "./node_modules/.bin/riffraff-artefact",
