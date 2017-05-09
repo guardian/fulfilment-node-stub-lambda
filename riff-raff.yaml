@@ -1,21 +1,16 @@
 regions:
 - eu-west-1
 stacks:
-- membership
-templates:
-  lambda:
+- membership 
+deployments:
+  fulfilment-node-stub-lambda:
     type: aws-lambda
     parameters:
       bucket: fulfilment-node-stub-lambda-dist
       prefixStack: false
       functionNames:
       - fulfilment-node-stub-lambda-
-  cloudformation:
+  fulfilment-node-stub-cloudformation:
     type: cloud-formation
     parameters:
       templatePath: 'cloudformation/cloudformation.yaml'
-deployments:
-  fulfilment-node-stub-lambda:
-    template: lambda
-  fulfilment-node-stub-cloudformation:
-    template: cloudformation
