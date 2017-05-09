@@ -8,9 +8,11 @@ deployments:
     parameters:
       bucket: fulfilment-node-stub-lambda-dist
       prefixStack: false
+      fileName: 'fulfilment-node-stub-lambda.zip'
       functionNames:
       - fulfilment-node-stub-lambda-
-  fulfilment-node-stub-cloudformation:
-    type: cloud-formation
-    parameters:
-      templatePath: 'cloudformation/cloudformation.yaml'
+#  fulfilment-node-stub-cloudformation:
+#  N.B.: cloudformation deployment not quite finished
+#   type: cloud-formation
+#     parameters:
+#       templatePath: 'cloudformation/cloudformation.yaml'

@@ -71,6 +71,8 @@ Resources:
             Action: lambda:invokeFunction
             FunctionName: !Sub fulfilment-node-stub-lambda-${Stage}
             Principal: apigateway.amazonaws.com
+            Environment:
+                stage: !Sub ${Stage}
         DependsOn: FulfilmentNodeStubLambda
 
     FulfilmentNodeStubLambdaAPI:
