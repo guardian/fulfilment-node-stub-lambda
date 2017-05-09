@@ -4,6 +4,7 @@
   "description": "hello world lambda that deploys through riff-raff and gets credentials from s3",
   "main": "index.js",
   "isAwsLambda": true,
+  "cloudformation":"cloudformation.yaml",
   "projectName": "MemSub::Fulfilment::Test",
   "riffraffFile": "riff-raff.yaml",
   "buildDir": "dist",
