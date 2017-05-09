@@ -2,7 +2,7 @@ import AWS from 'aws-sdk'
 
 let s3 = new AWS.S3()
 export  function loadFromS3() {
-   let stage = process.env.AWS_LAMBDA_FUNCTION_NAME.split("-").pop()
+   let stage = process.env.Stage
    console.log("running in stage " + stage) 
    return  new Promise((resolve, reject) =>{
      s3.getObject({ Bucket: "fulfilment-private", Key: "test.json" }, (err, creds) => {

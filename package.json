@@ -25,6 +25,6 @@
     "build": "yarn compile && yarn bundle",
     "compile": "rollup -c",
     "bundle": "VERBOSE=true ARTEFACT_PATH=$PWD yarn riffraff-artefact",
-    "local": "lambda-local -l dist/index.js -e event.json -h handler -P ~/.aws/credentials -p membership -r eu-west-1 -t 10"
+    "local": "lambda-local -l dist/index.js -e event.json -h handler -P ~/.aws/credentials -p membership -r eu-west-1 -t 10 -E {\\\"Stage\\\":\\\"CODE\\\"}"
   }
 }
