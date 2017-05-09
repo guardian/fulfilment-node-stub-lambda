@@ -1359,19 +1359,9 @@ node-pre-gyp@^0.6.29:
     tar "^2.2.1"
     tar-pack "^3.4.0"
 
-node-riffraff-artefact@guardian/node-riffraff-artefact#53dccffe1e787769477669c756597b4933b6f902:
+node-riffraff-artefact@^2.0.0:
   version "2.0.0"
-  resolved "https://codeload.github.com/guardian/node-riffraff-artefact/tar.gz/53dccffe1e787769477669c756597b4933b6f902"
-  dependencies:
-    aws-sdk "^2.4.14"
-    babel-cli "^6.11.4"
-    babel-preset-es2015 "^6.13.2"
-    glob "^7.0.5"
-    q "^1.4.1"
-
-node-riffraff-artefact@guardian/node-riffraff-artefact#8d98443b8511861add223670709ffca6016e1b4f:
-  version "2.0.0"
-  resolved "https://codeload.github.com/guardian/node-riffraff-artefact/tar.gz/8d98443b8511861add223670709ffca6016e1b4f"
+  resolved "https://registry.yarnpkg.com/node-riffraff-artefact/-/node-riffraff-artefact-2.0.0.tgz#5ccb6f84b455125bf3db87a6bbf2e48618ee4239"
   dependencies:
     aws-sdk "^2.4.14"
     babel-cli "^6.11.4"

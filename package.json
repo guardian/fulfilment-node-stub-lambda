@@ -13,7 +13,7 @@
     "babel-core": "^6.24.1",
     "babel-preset-env": "^1.4.0",
     "lambda-local": "ashiina/lambda-local#316f6c743f6305385655b00db7d8349dac174c1c",
-    "node-riffraff-artefact": "guardian/node-riffraff-artefact#8d98443b8511861add223670709ffca6016e1b4f",
+    "node-riffraff-artefact": "^2.0.0",
     "rollup": "^0.41.6",
     "rollup-plugin-babel": "^2.7.1",
     "rollup-plugin-commonjs": "^8.0.2",
