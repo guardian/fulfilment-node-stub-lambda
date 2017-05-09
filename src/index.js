@@ -4,7 +4,6 @@ import {loadFromS3} from './config'
 export function handler(event, context, callback) {
   console.log("Initialising.")
   let creds = loadFromS3()
-  console.log(process.env)
   creds.then((creds)=>{
     console.log(creds)
     callback(null)
