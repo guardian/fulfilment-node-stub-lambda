@@ -59,12 +59,12 @@ Resources:
                 Fn::GetAtt:
                 - FulfilmentNodeStubLambdaRole
                 - Arn
-            Environment:
-                Variables:
-                    'Stage': !Sub '${Stage}'
             MemorySize: 512
             Runtime: nodejs6.10
             Timeout: 300
+            Environment:
+                Variables:
+                    'Stage': !Sub ${Stage}
         DependsOn:
         - FulfilmentNodeStubLambdaRole
 
