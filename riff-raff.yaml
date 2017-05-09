@@ -17,5 +17,5 @@ templates:
 deployments:
   fulfilment-node-stub-lambda:
     template: lambda
-  cloudformation:
+  fulfilment-node-stub-cloudformation:
     template: cloudformation
