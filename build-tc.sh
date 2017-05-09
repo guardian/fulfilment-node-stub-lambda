@@ -23,11 +23,6 @@ PATH="$PATH:${YARN_LOCATION}/dist/bin/"
 
 yarn
 
-cd ./node_modules/node-riffraff-artefact
-yarn
-yarn prepublish
-cd ../..
-
 # Building the client-side assets
 
 yarn build
