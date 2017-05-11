@@ -23,7 +23,8 @@
     "dist" : "yarn install --production --modules-folder dist/node_modules",
     "compile": "babel src -d dist",
     "bundle": "VERBOSE=true ARTEFACT_PATH=$PWD yarn riffraff-artefact",
-    "local": "lambda-local -l dist/index.js -e event.json -h handler -P ~/.aws/credentials -p membership -r eu-west-1 -t 10 -E {\\\"Stage\\\":\\\"CODE\\\"}"
+    "local": "lambda-local -l dist/index.js -e event.json -h handler -P ~/.aws/credentials -p membership -r eu-west-1 -t 10 -E {\\\"Stage\\\":\\\"CODE\\\"}",
+    "clean":"rm -rf dist && rm -rf target"
   },
   "dependencies": {
     "lodash-es": "^4.17.4"
