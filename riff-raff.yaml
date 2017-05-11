@@ -11,6 +11,7 @@ deployments:
       fileName: 'fulfilment-node-stub-lambda.zip'
       functionNames:
       - fulfilment-node-stub-lambda-
+      - fulfilment-node-hello-lambda-
 #  fulfilment-node-stub-cloudformation:
 #  N.B.: cloudformation deployment not quite finished
 #   type: cloud-formation
