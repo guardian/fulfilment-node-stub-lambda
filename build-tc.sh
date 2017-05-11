@@ -23,6 +23,8 @@ PATH="$PATH:${YARN_LOCATION}/dist/bin/"
 
 yarn
 
+yarn install
+
 # Building the client-side assets
 
 yarn build
