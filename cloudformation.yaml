@@ -67,6 +67,28 @@ Resources:
                     'Stage': !Sub ${Stage}
         DependsOn:
         - FulfilmentNodeStubLambdaRole
+    FulfilmentNodeHelloLambda:
+        Type: AWS::Lambda::Function
+        Properties:
+            Description: hello world lambda that deploys through riff-raff
+            FunctionName:
+                !Sub fulfilment-node-hello-lambda-${Stage}
+            Code:
+                S3Bucket: fulfilment-node-stub-lambda-dist
+                S3Key: !Sub membership/${Stage}/fulfilment-node-stub-lambda/fulfilment-node-stub-lambda.zip
+            Handler: hello.handler
+            Role:
+                Fn::GetAtt:
+                - FulfilmentNodeStubLambdaRole
+                - Arn
+            MemorySize: 512
+            Runtime: nodejs6.10
+            Timeout: 300
+            Environment:
+                Variables:
+                    'Stage': !Sub ${Stage}
+        DependsOn:
+        - FulfilmentNodeStubLambdaRole
 
     FulfilmentNodeStubLambdaAPIPermission:
         Type: AWS::Lambda::Permission
