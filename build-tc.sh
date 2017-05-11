@@ -21,10 +21,17 @@ PATH="$PATH:${YARN_LOCATION}/dist/bin/"
 
 # Installing packages via yarn
 
-yarn
+echo "INSTALLING PRODUCTION DEPENDENCIES"
+yarn dist
 
+echo "INSTALLING BUILD DEPENDENCIES"
 yarn install
 
-# Building the client-side assets
+echo "TRANSPILING"
+yarn compile
 
-yarn build
+echo "BUNDLING AND UPLOADING TO RIFFRAFF"
+yarn riffraff
+
+
+
