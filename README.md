@@ -1,3 +1,8 @@
+# ⚠️ SEE FIRST ⚠️
+
+AWS have [provided Node 8.10](https://aws.amazon.com/blogs/compute/node-js-8-10-runtime-now-available-in-aws-lambda/) as a lambda runtime.
+This somewhat removes the need for babel as it provides async/await out of the box. This repository has not been updated to use the new runtime.
+
 # fulfilment-node-stub-lambda
 
 ## TODO
