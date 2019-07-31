@@ -3,15 +3,14 @@ regions:
 stacks:
 - <STACK> 
 deployments:
-  fulfilment-node-stub-lambda:
+  node-lambda:
     type: aws-lambda
     parameters:
-      bucket: fulfilment-node-stub-lambda-dist
+      bucket: ophan-dist
       prefixStack: false
-      fileName: 'fulfilment-node-stub-lambda.zip'
+      fileName: 'node-lambda.zip'
       functionNames:
-      - fulfilment-node-stub-lambda-
-      - fulfilment-node-hello-lambda-
+      - node-hello-lambda-
 #  fulfilment-node-stub-cloudformation:
 #  N.B.: cloudformation deployment not quite finished
 #   type: cloud-formation

@@ -1,11 +1,11 @@
 {
- projectName: "(name of your project)",
- vcsURL: "(github url)",
- actions: [
+ "projectName": "example-lambda",
+ "vcsURL": "https://github.com/guardian",
+ "actions": [
      {
-         action: "(the name of the deployment in riffraff)",
-         path: "(each individual deployment from your riff-raff.yaml file)",
-         compress: "('zip' or 'tar' or false)" 
+         "action": "node-lambda",
+         "path": "src/",
+         "compress": "zip" 
      }
   ]
 }
