@@ -1,7 +1,7 @@
 regions:
 - eu-west-1
 stacks:
-- membership 
+- <STACK> 
 deployments:
   fulfilment-node-stub-lambda:
     type: aws-lambda

@@ -1,0 +1,11 @@
+{
+ projectName: "(name of your project)",
+ vcsURL: "(github url)",
+ actions: [
+     {
+         action: "(the name of the deployment in riffraff)",
+         path: "(each individual deployment from your riff-raff.yaml file)",
+         compress: "('zip' or 'tar' or false)" 
+     }
+  ]
+}
