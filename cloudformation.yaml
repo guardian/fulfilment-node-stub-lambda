@@ -5,7 +5,7 @@ Parameters:
     App:
         Description: Application name
         Type: String
-        Default: fulfilment-node-stub-lambda
+        Default: node-stub-lambda
     Stack:
         Description: Stack name for the account which will hold this lambda
         Type: String
