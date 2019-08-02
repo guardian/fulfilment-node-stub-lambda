@@ -15,7 +15,8 @@
 
 ## package.json 
 
-This is responsible for building the lambda, this is a standard npm style package.json. We'll build it with [Yarn](https://yarnpkg.com/en/) to ensure versions of dependencies don't change between releases without knowing. 
+This is responsible for building the lambda, this is a standard npm style package.json. We'll build it with [Yarn](https://yarnpkg.com/en/) 
+to ensure versions of dependencies don't change between releases without knowing. 
 
 ### nvm
 
