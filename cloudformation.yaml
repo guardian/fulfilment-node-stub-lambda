@@ -1,11 +1,17 @@
 AWSTemplateFormatVersion: "2010-09-09"
-Description: hello world lambda that deploys through riff-raff and gets credentials from s3
+Description: hello world lambda that deploys through riff-raff
 
 Parameters:
+    DistBucket:
+        Description: The S3 Bucket for distributing code in this account
+        Type: String
     App:
         Description: Application name
         Type: String
-        Default: fulfilment-node-stub-lambda
+        Default: node-stub-lambda
+    Stack:
+        Description: Stack name for the account which will hold this lambda
+        Type: String
     Stage:
         Description: Stage name
         Type: String
@@ -15,10 +21,10 @@ Parameters:
         Default: CODE
 
 Resources:
-    FulfilmentNodeStubLambdaRole:
+    NodeStubLambdaRole:
         Type: AWS::IAM::Role
         Properties:
-            RoleName: !Sub FulfilmentNodeStubLambda-${Stage}
+            RoleName: !Sub NodeStubLambda-${Stage}
             AssumeRolePolicyDocument:
                 Statement:
                     - Effect: Allow
@@ -39,67 +45,26 @@ Resources:
                             - logs:PutLogEvents
                             - lambda:InvokeFunction
                             Resource: "*"
-                - PolicyName: PrivateBucket
-                  PolicyDocument:
-                      Statement:
-                          - Effect: Allow
-                            Action: s3:GetObject
-                            Resource: arn:aws:s3:::fulfilment-private/*
-    FulfilmentNodeStubLambda:
-        Type: AWS::Lambda::Function
-        Properties:
-            Description: hello world lambda that deploys through riff-raff and gets credentials from s3
-            FunctionName:
-                !Sub fulfilment-node-stub-lambda-${Stage}
-            Code:
-                S3Bucket: fulfilment-node-stub-lambda-dist
-                S3Key: !Sub membership/${Stage}/fulfilment-node-stub-lambda/fulfilment-node-stub-lambda.zip
-            Handler: index.handler
-            Role:
-                Fn::GetAtt:
-                - FulfilmentNodeStubLambdaRole
-                - Arn
-            MemorySize: 512
-            Runtime: nodejs6.10
-            Timeout: 300
-            Environment:
-                Variables:
-                    'Stage': !Sub ${Stage}
-        DependsOn:
-        - FulfilmentNodeStubLambdaRole
-    FulfilmentNodeHelloLambda:
+
+    NodeHelloLambda:
         Type: AWS::Lambda::Function
         Properties:
             Description: hello world lambda that deploys through riff-raff
             FunctionName:
-                !Sub fulfilment-node-hello-lambda-${Stage}
+                !Sub node-hello-lambda-${Stage}
             Code:
-                S3Bucket: fulfilment-node-stub-lambda-dist
-                S3Key: !Sub membership/${Stage}/fulfilment-node-stub-lambda/fulfilment-node-stub-lambda.zip
+                S3Bucket: !Sub ${DistBucket}
+                S3Key: !Sub ${Stack}/${Stage}/${App}/${App}.zip
             Handler: hello.handler
             Role:
                 Fn::GetAtt:
-                - FulfilmentNodeStubLambdaRole
+                - NodeStubLambdaRole
                 - Arn
             MemorySize: 512
-            Runtime: nodejs6.10
+            Runtime: nodejs10.15
             Timeout: 300
             Environment:
                 Variables:
                     'Stage': !Sub ${Stage}
         DependsOn:
-        - FulfilmentNodeStubLambdaRole
-
-    FulfilmentNodeStubLambdaAPIPermission:
-        Type: AWS::Lambda::Permission
-        Properties:
-            Action: lambda:invokeFunction
-            FunctionName: !Sub fulfilment-node-stub-lambda-${Stage}
-            Principal: apigateway.amazonaws.com
-        DependsOn: FulfilmentNodeStubLambda
-
-    FulfilmentNodeStubLambdaAPI:
-        Type: "AWS::ApiGateway::RestApi"
-        Properties:
-            Description: hello world lambda that deploys through riff-raff and gets credentials from s3
-            Name: !Sub fulfilment-node-stub-lambda-api-${Stage}
+        - NodeStubLambdaRole

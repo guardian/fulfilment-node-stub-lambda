@@ -1,0 +1,11 @@
+{
+ "projectName": "example-lambda",
+ "vcsURL": "https://github.com/guardian",
+ "actions": [
+     {
+         "action": "node-lambda",
+         "path": "dist/",
+         "compress": "zip" 
+     }
+  ]
+}

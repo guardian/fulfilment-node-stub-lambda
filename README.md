@@ -1,8 +1,3 @@
-# ⚠️ SEE FIRST ⚠️
-
-AWS have [provided Node 8.10](https://aws.amazon.com/blogs/compute/node-js-8-10-runtime-now-available-in-aws-lambda/) as a lambda runtime.
-This somewhat removes the need for babel as it provides async/await out of the box. This repository has not been updated to use the new runtime.
-
 # fulfilment-node-stub-lambda
 
 ## TODO
@@ -13,22 +8,19 @@ This somewhat removes the need for babel as it provides async/await out of the b
 
 ## Quick Start!
 
-0. `nvm install 6.10 && nvm use 6.10`
+0. `nvm install && nvm use`
 1. `yarn`
 2. `yarn compile && yarn local`
 3. fork this repo
 
 ## package.json 
 
-This is responsible for building the lambda, this is a standard npm style package.json. We'll build it with [Yarn](https://yarnpkg.com/en/) to ensure versions of dependencies don't change between releases without knowing. 
+This is responsible for building the lambda, this is a standard npm style package.json. We'll build it with [Yarn](https://yarnpkg.com/en/) 
+to ensure versions of dependencies don't change between releases without knowing. 
 
 ### nvm
 
-The latest node runtime available in AWS for lambdas in 6.10. The `.nvmrc` file will keep you using this when developing.
-
-### babel 
-
-Turns ES6 into something that will run on aws. (See nvm)
+The latest node runtime available in AWS for lambdas is 10.15. The `.nvmrc` file will keep you using this when developing.
 
 ### rollup
 
@@ -39,8 +31,12 @@ The lambda environoment includes the aws-sdk, so rollup is told to consider it a
 
 This provides us with a somewhat standard issue lambda environment, and allows you to run the lambda with the `yarn local` command. Preconfigured to use the membership profile from the normal place. When the file location can be auto-detected, this won't be hardcoded.
 
+### Deployment
 
-### [node-riffraff-artefact](https://github.com/guardian/node-riffraff-artefact)
+TODO: fill this in
+
+
+### [node-riffraff-artifact](https://www.npmjs.com/package/@guardian/node-riffraff-artifact)
 
 This takes our built lambda, and packages it for deployment with riff-raff. It is responsible for the following settings:
 - `isAwsLambda`
