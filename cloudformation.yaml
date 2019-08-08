@@ -45,28 +45,7 @@ Resources:
                             - logs:PutLogEvents
                             - lambda:InvokeFunction
                             Resource: "*"
-    NodeStubLambda:
-        Type: AWS::Lambda::Function
-        Properties:
-            Description: hello world lambda that deploys through riff-raff
-            FunctionName:
-                !Sub node-stub-lambda-${Stage}
-            Code:
-                S3Bucket: !Sub ${DistBucket}
-                S3Key: !Sub ${Stack}/${Stage}/node-stub-lambda/node-stub-lambda.zip
-            Handler: index.handler
-            Role:
-                Fn::GetAtt:
-                - NodeStubLambdaRole
-                - Arn
-            MemorySize: 512
-            Runtime: nodejs6.10
-            Timeout: 300
-            Environment:
-                Variables:
-                    'Stage': !Sub ${Stage}
-        DependsOn:
-        - NodeStubLambdaRole
+
     NodeHelloLambda:
         Type: AWS::Lambda::Function
         Properties:
@@ -89,17 +68,3 @@ Resources:
                     'Stage': !Sub ${Stage}
         DependsOn:
         - NodeStubLambdaRole
-
-    NodeStubLambdaAPIPermission:
-        Type: AWS::Lambda::Permission
-        Properties:
-            Action: lambda:invokeFunction
-            FunctionName: !Sub node-stub-lambda-${Stage}
-            Principal: apigateway.amazonaws.com
-        DependsOn: NodeStubLambda
-
-    NodeStubLambdaAPI:
-        Type: "AWS::ApiGateway::RestApi"
-        Properties:
-            Description: hello world lambda that deploys through riff-raff
-            Name: !Sub node-stub-lambda-api-${Stage}

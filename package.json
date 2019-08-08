@@ -1,8 +1,8 @@
 {
   "name": "fulfilment-node-stub-lambda",
   "version": "0.0.1",
-  "description": "hello world lambda that deploys through riff-raff and gets credentials from s3",
-  "main": "index.js",
+  "description": "hello world lambda that deploys through riff-raff",
+  "main": "hello.js",
   "isAwsLambda": true,
   "cloudformation": "cloudformation.yaml",
   "projectName": "MemSub::Fulfilment::Test",
@@ -15,7 +15,7 @@
     "lambda-local": "^1.6.3"
   },
   "scripts": {
-    "compile": "ncc build src/index.js -o dist -m",
+    "compile": "ncc build src/hello.js -o dist -m",
     "dist": "yarn install --production --modules-folder dist/node_modules",
     "riffraff": "node-riffraff-artifact",
     "runLocal": "./runLocal.js",

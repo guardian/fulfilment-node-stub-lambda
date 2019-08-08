@@ -10,7 +10,6 @@ deployments:
       prefixStack: false
       fileName: 'node-lambda.zip'
       functionNames:
-      - node-index-lambda-
       - node-hello-lambda-
 #  fulfilment-node-stub-cloudformation:
 #  N.B.: cloudformation deployment not quite finished
