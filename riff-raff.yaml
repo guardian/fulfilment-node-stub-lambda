@@ -1,12 +1,12 @@
 regions:
 - eu-west-1
 stacks:
-- <STACK> 
+- ophan
 deployments:
   node-lambda:
     type: aws-lambda
     parameters:
-      bucket: <BUCKET-NAME> # typically your "-dist" bucket
+      bucket: ophan-dist # typically your "-dist" bucket
       prefixStack: false
       fileName: 'node-lambda.zip'
       functionNames:
