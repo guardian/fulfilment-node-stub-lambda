@@ -6,7 +6,7 @@ deployments:
   node-lambda:
     type: aws-lambda
     parameters:
-      bucket: ophan-dist
+      bucket: <BUCKET-NAME> # typically your "-dist" bucket
       prefixStack: false
       fileName: 'node-lambda.zip'
       functionNames:
