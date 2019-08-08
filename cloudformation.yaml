@@ -61,7 +61,7 @@ Resources:
                 - NodeStubLambdaRole
                 - Arn
             MemorySize: 512
-            Runtime: nodejs10.15
+            Runtime: nodejs10.x
             Timeout: 300
             Environment:
                 Variables:
