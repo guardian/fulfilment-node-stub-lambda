@@ -27,6 +27,6 @@
     "clean":"rm -rf dist && rm -rf target"
   },
   "dependencies": {
-    "lodash-es": "^4.17.4"
+    "lodash-es": "^4.17.21"
   }
 }
